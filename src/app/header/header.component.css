@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+
+body{
+    background-color:#fff59d;
+ }
+
+.header{
+    /*
+    z-index: 10000;
+    position: fixed;
+    */
+    background-color:#033b7c;
+    display: flex;  /*Establecimos que los objetos se posicionen en flex pero tambien podrian ser en linea con inline o uno encima de otro con block*/
+    justify-content: flex-end;
+    align-items: center;
+    /*
+    width: 100%;
+    */
+    height: 85px;
+    padding: 5px 10%;
+ }
+
+.header .logo{
+    
+    cursor: pointer;    /* El raton se transforma en una mano al pasar por la img */
+    margin-right: auto;
+}
+
+.header .logo img{
+    height: 70px;
+    width: auto;
+    transition: all 0.3s;   /*Transition es una propieda que se requiere que se establezaca a que se desea agregar una 
+                            transicion, en este caso seleccionamos a tod y como estamos en img, sera a todo animacionde img*/
+ }
+
+ .header .logo img:hover{ /*El hover en un evento que reancciona al pasar el cursor por encima en este caso de la img*/
+    transform: scale(1.2); /*Al pasar el raton sobre la img, esta aumenta su escala en 1.2 de tamaño */
+ }
+
+ .header .menu{
+    list-style: none;  /*Elimina los puntos que aparecen en las listas ordenadas*/
+}
+
+.header .menu li{
+    display: inline-block; /*Establece como se colocaran los objeto en este caso los establecimos en linea*/
+    padding: 0 20px;
+}
+
+.header .menu li:hover{
+    transform: scale(1.1);  /* Al pasar el raton sobre los li, estos aumentan su escala en 1.1 de tamaño */
+}
+
+.header .menu a{
+    font-size: 700;
+    color:  #eceff1;
+    text-decoration: none; /*Quita las lineas de los links */
+}
+
+.header .menu li a:hover{
+    color: #ffbc0e;
+}
+
+.header .btn button{
+    margin-left: 20px;
+    font-weight: 700;
+    color: #033b7c;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;    /* El raton se transforma en una mano al pasar por la img */
+    transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+    background-color: #e2f1f8;
+    color: #ffbc0e;
+    transform: scale(1.1);
+}

@@ -1,0 +1,66 @@
+.banner{
+    width: 100%;
+    z-index: 9;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
+  }
+  
+  #bannerImg {
+    width: 100%;
+    margin: 0;
+    z-index: 10;
+  }
+
+#nubeImg_1{
+  position: relative;
+  width: 40%;
+  left: 130px;
+  bottom: 730px;
+  animation-name: nube_one;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#nubeImg_2{
+  position: relative;
+  width: 40%;
+  bottom: 400px;
+  right: 150px;
+  animation: nube_two;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  
+}
+
+#nubeImg_3{
+  position: relative;
+  width: 25%;
+  bottom: 800px;
+  left: 1200px;
+  animation: nube_three;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  
+}
+
+@keyframes nube_one {
+    0%{left: 130px;}
+    33%{left: calc(100% + 10px);opacity: 0%;}
+    67%{visibility: hidden; left: -100%;opacity: 0%;}
+}
+
+@keyframes nube_two {
+  0%{left: -145px;}
+  33%{transform: translateX(175%); opacity: 0%;}
+  66%{transform: translateX(-175%); opacity: 0%;}
+}
+
+@keyframes nube_three {
+  0%{left: 1200px;}
+  20%{left: 100%; opacity: 0%;}
+  21%{left: -100%; opacity: 0%;}
+}
+
